@@ -37,7 +37,7 @@ const Hero = () => {
       <div ref={heroRef} className="max-w-4xl mx-auto px-4 sm:px-6 py-20 text-center opacity-0">
         <div className="inline-block mb-6">
           <div className="px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs font-medium tracking-wider">
-            AI ENGINEER
+            Computer Engineer
           </div>
         </div>
         
@@ -46,8 +46,9 @@ const Hero = () => {
         </h1>
         
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-          AI Engineer with expertise in Machine Learning, Software Development, and Cybersecurity. 
-          Currently based in Amsterdam, Netherlands.
+         
+          Computer Engineer with knowledge in Machine Learning, Software Development, Cybersecurity, and Systems Administration. 
+          Currently based in Groningen, Netherlands.
         </p>
         
         <div className="flex flex-wrap justify-center gap-4 mb-16">

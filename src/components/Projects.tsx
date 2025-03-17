@@ -50,7 +50,7 @@ const Projects = () => {
       },
       {
         title: 'Multicast & GRE Networks Lab',
-        description: 'Configured and troubleshot multicast networks over GRE tunnels on Cisco 7200 routers as part of a university lab. Implemented OSPF, BGP, RIPv2, and both dense and sparse multicast modes in GNS3. Verified connectivity and routing tables through rigorous testing.',
+        description: 'Configured and troubleshot multicast networks over GRE tunnels on Cisco 7200 routers. Implemented OSPF, BGP, RIPv2, and both dense and sparse multicast modes in GNS3. Verified connectivity and routing tables through rigorous testing.',
         icon: <Network className="h-6 w-6" />, // Replace with your preferred network-related icon
         color: 'bg-red-50 text-red-600'
       },

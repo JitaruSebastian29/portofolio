@@ -48,7 +48,7 @@ const Skills = () => {
       skills: [
         'Tensorflow', 'LATEX', 'Java', 'C++', 'Vue.js', 'Kotlin', 'Jetpack-Compose', 
         'Model-View-Viewmodel (MVVM) Architectures', 'Spring backend Framework', 'Kafka', 
-        'Network Protocols (BGP, OSPF, Multicast Routing (IGMP, PIM Sparse, Dense and stub areas), OSI Architecture TCP, UDP, DNS, Tunnels)', 
+        'Network Protocols (BGP, RIP ,OSPF, Multicast Routing (IGMP, PIM Sparse, Dense and stub areas), OSI Architecture TCP, UDP, DNS, Tunnels)', 
         'Wireshark', 'GNS3'
       ]
     },

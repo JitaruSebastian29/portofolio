@@ -1,6 +1,6 @@
 
 import { useEffect, useRef } from 'react';
-import { Server, SmartphoneNfc, Microscope } from 'lucide-react';
+import { Server, SmartphoneNfc, Microscope, Network } from 'lucide-react';
 
 const Projects = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -34,26 +34,33 @@ const Projects = () => {
     return () => observer.disconnect();
   }, []);
 
-  const projects = [
-    {
-      title: 'Virtualization Environment',
-      description: 'Created a personal virtualization environment using Proxmox, managing multiple VMs and Docker containers.',
-      icon: <Server className="h-6 w-6" />,
-      color: 'bg-blue-50 text-blue-600'
-    },
-    {
-      title: 'Android App for Addiction Control',
-      description: 'Designed and developed an Android app in Kotlin-Jetpack Compose with MVVM architecture to help users manage addictive behaviors.',
-      icon: <SmartphoneNfc className="h-6 w-6" />,
-      color: 'bg-green-50 text-green-600'
-    },
-    {
-      title: 'Research Projects',
-      description: 'Explored topics such as ROS, Grasping & Manipulation (GR-ConvNet), Deep Reinforcement Learning, CNNs, Computer Vision, Hyperparameter Tuning, NLP, Neural Networks, Overfitting, PCA, Regression, RNN, and Supervised Learning.',
-      icon: <Microscope className="h-6 w-6" />,
-      color: 'bg-purple-50 text-purple-600'
-    }
-  ];
+  const projects = 
+    [
+      {
+        title: 'Virtualization Environment',
+        description: 'Created a personal virtualization environment using Proxmox, managing multiple VMs and Docker containers.',
+        icon: <Server className="h-6 w-6" />,
+        color: 'bg-blue-50 text-blue-600'
+      },
+      {
+        title: 'Android App for Addiction Control',
+        description: 'Designed and developed an Android app in Kotlin-Jetpack Compose with MVVM architecture to help users manage addictive behaviors.',
+        icon: <SmartphoneNfc className="h-6 w-6" />,
+        color: 'bg-green-50 text-green-600'
+      },
+      {
+        title: 'Multicast & GRE Networks Lab',
+        description: 'Configured and troubleshot multicast networks over GRE tunnels on Cisco 7200 routers as part of a university lab. Implemented OSPF, BGP, RIPv2, and both dense and sparse multicast modes in GNS3. Verified connectivity and routing tables through rigorous testing.',
+        icon: <Network className="h-6 w-6" />, // Replace with your preferred network-related icon
+        color: 'bg-red-50 text-red-600'
+      },
+      {
+        title: 'Research Projects',
+        description: 'Explored topics such as ROS, Grasping & Manipulation (GR-ConvNet), Deep Reinforcement Learning, CNNs, Computer Vision, Hyperparameter Tuning, NLP, Neural Networks, Overfitting, PCA, Regression, RNN, and Supervised Learning.',
+        icon: <Microscope className="h-6 w-6" />,
+        color: 'bg-purple-50 text-purple-600'
+      }
+    ];
 
   return (
     <section id="projects" className="py-20 bg-white">

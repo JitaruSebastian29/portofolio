@@ -30,8 +30,8 @@ const Footer = () => {
           <div className="md:col-span-2">
             <h3 className="text-lg font-semibold mb-4">Sebastian Jitaru</h3>
             <p className="text-muted-foreground mb-4 max-w-md">
-              AI Engineer with expertise in Machine Learning, Software Development, and Cybersecurity.
-              Passionate about creating innovative solutions and exploring cutting-edge technologies.
+              Computer Engineer with knwoledge in Machine Learning, Software Development, Cybersecurity and Systems Administration.
+              Passionate about creating innovative solutions.
             </p>
             
             <div className="flex space-x-4">

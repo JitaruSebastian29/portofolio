@@ -1,36 +1,31 @@
 # Portfolio
 
-Personal site for Sebastian Jitaru. One page, no backend.
+Personal site for Sebastian Jitaru. Static HTML and CSS, no build step and no
+dependencies.
 
-## Stack
+## Files
 
-Vite, React, TypeScript, Tailwind CSS.
+- `index.html` · all content
+- `script.js` · the tabs, about 40 lines
+- `styles.css` · all styling
+- `cv-sebastian-jitaru.pdf` · linked from the header
+- `favicon.ico`
 
-## Develop
+## Edit
+
+Edit the files directly. There is nothing to install and nothing to compile.
+
+Serve it over HTTP rather than opening `index.html` as a file, otherwise the
+browser does not load `styles.css` and `script.js`:
 
 ```
-npm install
-npm run dev
+python3 -m http.server 8000
 ```
 
-The dev server runs on http://localhost:8080.
+Then open http://localhost:8000.
 
-## Build
+## Deploy
 
-```
-npm run build
-```
-
-Output goes to `dist/`. `vite.config.ts` sets `base: "./"`, so the build works
-at a domain root and under a project path such as `/portofolio/`.
-
-## Content
-
-All text lives in `src/content.ts`. Edit that file to update the site. The CV
-PDF and the favicon live in `static/`, which Vite copies to the build root.
-
-## Deploy to GitLab Pages
-
-`.gitlab-ci.yml` runs on the default branch: it builds, then renames `dist` to
-`public`, which is the directory GitLab Pages publishes. Vite's own static
-directory is `static/` so the two do not collide.
+GitHub Pages serves these files as they are. In Settings, Pages, set Source to
+"Deploy from a branch", branch `main`, folder `/ (root)`. A push to `main` goes
+live in about a minute.

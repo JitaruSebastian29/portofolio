@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Sebastian Jitaru</title>
     <meta
       name="description"
@@ -19,7 +20,243 @@
   </head>
 
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div class="page">
+      <header>
+        <h1>Sebastian Jitaru</h1>
+        <p class="role">AI Engineer, Amsterdam, Netherlands</p>
+        <p class="intro">
+          I build machine learning systems and the infrastructure that runs
+          them. Currently AI Engineer at Prioticket in Amsterdam, and finishing
+          an MSc in Artificial Intelligence at the University of Groningen.
+        </p>
+        <nav class="links">
+          <a href="mailto:sjitaru29@gmail.com">sjitaru29@gmail.com</a>
+          <a href="https://github.com/JitaruSebastian29" rel="me noreferrer" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/sebastian-jitaru/" rel="me noreferrer" target="_blank">LinkedIn</a>
+          <a href="cv-sebastian-jitaru.pdf">CV (PDF)</a>
+        </nav>
+      </header>
+
+      <main>
+        <div class="tabs" role="tablist" aria-label="Sections">
+          <button type="button" role="tab" id="tab-experience" aria-controls="panel-experience" aria-selected="true" tabindex="0">Experience</button>
+          <button type="button" role="tab" id="tab-education" aria-controls="panel-education" aria-selected="false" tabindex="-1">Education</button>
+          <button type="button" role="tab" id="tab-research" aria-controls="panel-research" aria-selected="false" tabindex="-1">Research and projects</button>
+          <button type="button" role="tab" id="tab-skills" aria-controls="panel-skills" aria-selected="false" tabindex="-1">Skills</button>
+          <button type="button" role="tab" id="tab-outside" aria-controls="panel-outside" aria-selected="false" tabindex="-1">Outside work</button>
+        </div>
+
+        <section id="panel-experience" role="tabpanel" aria-labelledby="tab-experience" tabindex="0">
+          <article>
+            <div class="entry-head">
+              <h2>AI Engineer</h2>
+              <p class="dates">Jan 2025 – Present</p>
+            </div>
+            <p class="org">Prioticket, Amsterdam, Netherlands</p>
+            <ul>
+              <li>Built a dynamic pricing module that predicts optimal price per product per client, using an ensemble of gradient boosting and regularized regression models.</li>
+              <li>Built the MLOps pipeline around it: feature and prediction distributions are monitored for drift, models are evaluated against baseline metrics, and retraining and deployment trigger on performance degradation.</li>
+              <li>Built a RAG pipeline with hybrid sparse-dense retrieval, reciprocal rank fusion and cross-encoder re-ranking over a central knowledge base. Manual completion time dropped by 60%.</li>
+              <li>Built a data aggregation pipeline for client onboarding: Named Entity Recognition, dense embedding similarity for fuzzy deduplication, and rule-based classification into structured client profiles.</li>
+              <li>Built the edge networking layer for the company's Cloud Run services in Terraform: a global HTTPS load balancer per project, Cloud Armor restricting origin traffic to the CDN ranges, Certificate Manager for wildcard certificates with DNS authorisation, mTLS on origin pull, and DNS in Cloudflare.</li>
+              <li>Wrote it as a reusable module with one configuration per environment, and gated it in GitLab CI/CD so a plan runs automatically and the apply is a manual job.</li>
+            </ul>
+          </article>
+
+          <article>
+            <div class="entry-head">
+              <h2>Software Engineer</h2>
+              <p class="dates">Jul 2024 – Dec 2024</p>
+            </div>
+            <p class="org">Prioticket, Amsterdam, Netherlands</p>
+            <ul>
+              <li>Built full-stack features across several codebases in TypeScript, Angular, NestJS and Express.js, with async and event-driven patterns, on BigQuery and CloudSQL.</li>
+              <li>Designed idempotent REST APIs with error propagation and request validation, and tracked response times in NewRelic and Greylog.</li>
+              <li>Ran GitLab CI/CD pipelines for reporting frontend and backend services, deploying to Google Cloud Kubernetes with automated scaling and monitoring against a 99.9% uptime SLA.</li>
+              <li>Built multi-tenant reporting with role-based access control and tenant-isolated query scoping, export features for enterprise clients, and integrations with Twinfield and Oracle Finance.</li>
+            </ul>
+          </article>
+
+          <article>
+            <div class="entry-head">
+              <h2>Cybersecurity Analyst</h2>
+              <p class="dates">Jun 2023 – Jun 2024</p>
+            </div>
+            <p class="org">Semic, Lleida, Spain</p>
+            <ul>
+              <li>Deployed and maintained endpoint protection and EDR (CrowdStrike, Kaspersky, Bitdefender) for public and private sector clients, including the Hospital of Barcelona-Granollers and the Government of Andorra.</li>
+              <li>Investigated security incidents, including ransomware intrusions against SMEs in Lleida. Analysed logs and network traffic, and ran internal security audits and vulnerability assessments using OWASP methodologies and Burp Suite.</li>
+              <li>Administered Fortinet firewalls, ran phishing simulations against cloned web assets, deployed honeypots for threat intelligence, and managed Windows and Linux server environments.</li>
+            </ul>
+          </article>
+
+          <article>
+            <div class="entry-head">
+              <h2>Machine Learning Engineer, Internship</h2>
+              <p class="dates">Feb 2024 – Jul 2024</p>
+            </div>
+            <p class="org">Ruxailab, Brazil, remote</p>
+            <ul>
+              <li>Trained a CNN on the FER dataset for real-time video emotion analysis, reaching 72% per-frame accuracy.</li>
+              <li>Built the serving infrastructure with FastAPI (async endpoints, batch inference) and Vue.js, containerised with Docker, deployed on GCP with Firebase for auth and persistence.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section id="panel-education" role="tabpanel" aria-labelledby="tab-education" tabindex="0">
+          <article>
+            <div class="entry-head">
+              <h2>MSc Artificial Intelligence</h2>
+              <p class="dates">Sept 2024 – Aug 2026</p>
+            </div>
+            <p class="org">University of Groningen, Netherlands</p>
+            <ul>
+              <li>Machine Learning and Robotics track. Deep Learning, Pattern Recognition, Natural Language Processing with Deep Learning, Deep Reinforcement Learning, Multi-Agent Reinforcement Learning, Trustworthy and Explainable AI, Computer Vision, Cognitive Robotics, Advanced Machine Learning, MLOps.</li>
+            </ul>
+          </article>
+
+          <article>
+            <div class="entry-head">
+              <h2>BSc Computer Engineering</h2>
+              <p class="dates">Sept 2020 – Jul 2024</p>
+            </div>
+            <p class="org">University of Lleida, Spain</p>
+            <ul>
+              <li>Cybersecurity and Software Development track. Algorithms and Data Structures, Object Oriented Programming, Calculus, Statistics, Computer Architecture, Computational Logic, Physics, Systems Administration, Communication Networks, Software Architectures, Mobile Applications, Advanced Networks and Communications, Distributed Computing, Application Security, Cryptography.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section id="panel-research" role="tabpanel" aria-labelledby="tab-research" tabindex="0">
+          <article>
+            <div class="entry-head">
+              <h2>Guided molecule selection using chemical foundation models for peptide design</h2>
+              <p class="dates">Ongoing</p>
+            </div>
+            <p class="org">MSc thesis, University of Groningen and Traffikgene</p>
+            <ul>
+              <li>Built the pipeline end to end: data preprocessing and validation, model training, and large-scale batch inference over a candidate pool of millions, in PyTorch, HuggingFace Transformers and scikit-learn on an HPC cluster (SLURM).</li>
+              <li>Fine-tuned a transformer foundation model with LoRA and ran domain-adaptive continued pretraining of the encoder backbone.</li>
+              <li>Built a heterogeneous prediction ensemble with out-of-distribution guardrails that flags low-confidence outputs, so downstream cost goes to high-value candidates only.</li>
+              <li>Interpreted the CLM backbone with sparse autoencoders and Max Affine Spline Operator theory, to read the internal representation and classify latents into human-interpretable features.</li>
+            </ul>
+          </article>
+
+          <article>
+            <div class="entry-head">
+              <h2>Do LLMs think too much? Adaptive chain-of-thought length reduction via latent state prediction</h2>
+              <p class="dates">Ongoing</p>
+            </div>
+            <p class="org">University of Groningen, with Jeroen Niemendal and Viktor Vesely</p>
+            <ul>
+              <li>A chain-of-thought length reduction method that classifies the LLM internal hidden state, so the model predicts the minimum number of tokens it needs to reach an accurate solution.</li>
+            </ul>
+          </article>
+
+          <article>
+            <div class="entry-head">
+              <h2>Liquid ensembles: differentiable liquid democracy for decentralized model specialization</h2>
+              <p class="dates">Ongoing</p>
+            </div>
+            <p class="org">University of Groningen, with Viktor Vesely</p>
+            <ul>
+              <li>A deep ensemble method where models delegate decisions to other models through fully differentiable mechanisms, which lets task specialization emerge.</li>
+              <li>To be submitted to Transactions on Machine Learning Research.</li>
+            </ul>
+          </article>
+
+          <article>
+            <div class="entry-head">
+              <h2>Production ML system for issue classification</h2>
+              <p class="dates">2025</p>
+            </div>
+            <p class="org">University of Groningen</p>
+            <ul>
+              <li>Multi-label issue classification on a fine-tuned BERT model, with the full MLOps lifecycle: DVC for data versioning, MLflow with MinIO for experiment tracking and artifacts, Pandera for schema validation, FastAPI for async and batch serving.</li>
+              <li>Full observability stack (Prometheus, Grafana, Loki, Promtail) with hybrid push and pull monitoring, predictions stored in MongoDB, all services in Docker Compose, build-test-train-deploy automated in GitLab CI/CD with remote VM deployment.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section id="panel-skills" role="tabpanel" aria-labelledby="tab-skills" tabindex="0">
+          <dl class="skills">
+            <div>
+              <dt>Machine learning</dt>
+              <dd>PyTorch, JAX, vLLM, scikit-learn, LangChain</dd>
+            </div>
+            <div>
+              <dt>MLOps and infrastructure</dt>
+              <dd>MLflow, DVC, Pandera, Docker, Kubernetes, Grafana, Prometheus, Loki, GitLab CI/CD, Vertex AI, NewRelic, Graylog</dd>
+            </div>
+            <div>
+              <dt>Cloud and infrastructure as code</dt>
+              <dd>Terraform, GCP (Cloud Run, Cloud Armor, Certificate Manager, global load balancing, Workload Identity Federation), AWS, Cloudflare, mTLS</dd>
+            </div>
+            <div>
+              <dt>HPC and compute</dt>
+              <dd>SLURM, CUDA, multi-node GPU cluster training</dd>
+            </div>
+            <div>
+              <dt>Backend</dt>
+              <dd>Python, TypeScript, JavaScript, NestJS, FastAPI, Express.js, Java</dd>
+            </div>
+            <div>
+              <dt>Data and storage</dt>
+              <dd>SQL, MongoDB, BigQuery, Elasticsearch, Redis, MinIO</dd>
+            </div>
+            <div>
+              <dt>Frontend</dt>
+              <dd>Angular, Next.js, React, CSS, HTML</dd>
+            </div>
+            <div>
+              <dt>Security</dt>
+              <dd>CrowdStrike, Kaspersky, Bitdefender, Fortinet, Burp Suite, Nmap, SIEM (Splunk, QRadar), MITRE ATT&amp;CK, YARA, Sigma, OWASP, EDR, threat intelligence, incident response, vulnerability assessment, network administration</dd>
+            </div>
+            <div>
+              <dt>Architecture and practice</dt>
+              <dd>Event-driven and async architectures, stream processing, REST API design, replication and partitioning, OOP, SOLID, design patterns, Git, Linux</dd>
+            </div>
+            <div>
+              <dt>Certificates</dt>
+              <dd>Cambridge Proficiency Exam (CAE) C2, CrowdStrike, Kaspersky, Bitdefender, Google Cloud</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section id="panel-outside" role="tabpanel" aria-labelledby="tab-outside" tabindex="0">
+          <article>
+            <h2>Hackathons</h2>
+            <ul>
+              <li>Member of the HackEPS organisation at the University of Lleida, helping run hackathons with over 100 participants.</li>
+              <li>Competed in and won hackathons including HackUPC in Barcelona and HackUDC in Galicia, where my team took the European Space Agency challenge and built a satellite data app with Flutter, InfluxDB and FastAPI.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h2>Mountains</h2>
+            <ul>
+              <li>Summited several of the highest peaks in the Pyrenees: Aneto (3404 m), Carlit (2921 m), Puigmal (2910 m), Puigpedrós (2912 m) and Pedraforca (2506 m).</li>
+              <li>Bouldering indoors and rock climbing outdoors.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h2>Combat sports</h2>
+            <ul>
+              <li>Five years of Muay Thai, Jiu Jitsu and MMA.</li>
+            </ul>
+          </article>
+        </section>
+      </main>
+
+      <footer>
+        <p>
+          Source on
+          <a href="https://github.com/JitaruSebastian29/portofolio" rel="noreferrer" target="_blank">GitHub</a>.
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js" defer></script>
   </body>
 </html>

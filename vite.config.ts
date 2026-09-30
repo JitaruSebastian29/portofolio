@@ -1,20 +1,14 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
-import path from "path";
 
-// https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+// Relative base so the build works both at a domain root and under a
+// GitLab Pages project path such as /portofolio/.
+export default defineConfig({
+  base: "./",
+  publicDir: "static",
+  plugins: [react()],
   server: {
     host: "::",
     port: 8080,
   },
-  plugins: [
-    react(),
-  ],
-  
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
-}));
+});
